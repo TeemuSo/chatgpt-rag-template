@@ -11,15 +11,12 @@ load_dotenv()
 
 ## Initialize the OpenAI API
 openai.api_key = os.environ["OPENAI_API_KEY"]
-pinecone.init(api_key=os.environ["PINECONE_API_KEY"],
-              environment='us-west4-gcp-free')
-index = pinecone.Index('openai')
 
-# TODO: 1. uncomment and insert your pinecone API key and environment here
-# pinecone.init(api_key=os.environ["PINECONE_API_KEY"],
-#               environment='us-west4-gcp-free')
-# TODO: 2. uncomment and insert your pinecone index name here
-# index = pinecone.Index('tampere-tourism')
+# TODO: 1. insert your pinecone API key and environment here
+pinecone.init(api_key=os.environ["PINECONE_API_KEY"],
+              environment='')
+# TODO: 2. insert your pinecone index name here
+index = pinecone.Index('')
 
 # TODO: 3. Write your own pre-prompt here
 def template(x): return f"""You are a chatbot for telling information about city called Tampere.

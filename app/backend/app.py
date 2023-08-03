@@ -11,7 +11,6 @@ import logging
 import uvicorn
 from pydantic import BaseModel
 import os
-print(os.getcwd())
 
 app = FastAPI()
 

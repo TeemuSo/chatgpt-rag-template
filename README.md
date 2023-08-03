@@ -1,3 +1,35 @@
+To get started with the template locally, you need to add your own data, and modify few places in the code. Proceed to section "Add your own data" to get started
+
+# Get started locally
+
+## Setting up environment
+
+1. First, you need to create your own Pinecone account at [Pinecone](https://www.pinecone.io/learn/).
+2. Create new index for your Pinecone account. The index should have 1536 dimensions. Take note on what is the name of the index, and as well what is the environment.
+3. Create new API key at the Pinecone console. Save it in secure place.
+4. Create [OpenAI](https://openai.com/) account.
+5. After creating account, navigate to https://platform.openai.com/account/api-keys to create a new API key. Save the generated key in secure place.
+6. Write the OpenAI API key to variable in `OPENAI_API_KEY` in `.env`. Write the Pinecone API key to `PINECONE_API_KEY` in `.env`.
+
+## Adding data to the Pinecone index
+
+1. Open notebook `add_data.ipynb` from the root folder of this project.
+2. Go through the notebook, adding your Pinecone index name and environment as instructed. You can create free index at the Pinecone, and you will be assigned a region, environment for it.
+3. The notebook is populated with dummy data that can be tested for running the notebook. In reality you should add your own data. The html key in the data JSON is the content that will be rendered in the application. Make sure to write valid HTML in that html field. 
+4. After the notebook has been ran succesfully, you should have data in the Pinecone and you are ready for action.
+
+## Running the application
+
+1. Navigate to `/app/frontend` folder.
+2. Assuming you have node installed, run command `npm install` to install all the dependencies that are required to build the frontend.
+3. After installation is done, run command `npm run build`. This will build the application to static files, saving them to `/app/backend/static`.
+4. Navigate to `/app/backend`.
+5. Install dependencies to your Python environment with `python -m pip install -r requirements.txt`. You should use virtual environment, such as [Miniconda](https://docs.conda.io/en/latest/miniconda.html). Feel free to check out tutorials on Python virtual environments before installing the requirements, to make sure you won't install the packages in your global Python interpreter.
+6. Run the application with `uvicorn app:app --reload`. Now you can navigate to `http://127.0.0.1:8000`, where the application will be running. 
+
+
+After creating your account, create a new index, and remember your 
+
 # Deploy the chatbot
 
 1. Create a Resource Group:
