@@ -1,0 +1,9 @@
+openai
+tenacity
+pinecone-client
+python-dotenv
+beautifulsoup4
+tiktoken
+fastapi
+uvicorn
+pydantic
